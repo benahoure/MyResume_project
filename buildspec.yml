@@ -1,0 +1,32 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9 # Or the preferred Python version
+    commands:
+      - echo "Installing dependencies..."
+      - pip install pylint beautifulsoup4 lxml # Install Python packages for linting and validation
+
+  pre_build:
+    commands:
+      - echo "Starting Pre-Build Phase: Linting HTML and CSS files..."
+      - pylint *.html || exit 1 # Lint HTML files
+      # Add more linting or validation commands for CSS if required
+
+  build:
+    commands:
+      - echo "Build Phase: Running tests (if any)..."
+      # Add additional commands if you have test frameworks or validators
+
+  post_build:
+    commands:
+      - echo "Post-Build Phase: Preparing for deployment..."
+      - echo "Syncing files to S3 bucket..."
+      - aws s3 sync . s3://YOUR_BUCKET_NAME --exclude "*.yml" --exclude "*.md"
+      - echo "Deployment to S3 completed!"
+
+artifacts:
+  files:
+    - "*.html"
+    - "*.css"
