@@ -74,7 +74,7 @@ body {
 #ft {
     padding: 1em 0 5em 0;
     font-size: 92%;
-    border-top: 1px solid #060a77;
+    border-top: 1px solid #ccc;
     text-align: center;
 }
 
@@ -113,7 +113,7 @@ p {
 }
 
 a {
-    color: #b60508
+    color: #990003
 }
 
 a:hover {
@@ -126,7 +126,7 @@ strong {
 
 li {
     line-height: 24px;
-    border-bottom: 1px solid #9f8a8a;
+    border-bottom: 1px solid #ccc;
 }
 
 p.enlarge {
@@ -136,7 +136,7 @@ p.enlarge {
 }
 
 p.enlarge span {
-    color: #10188a
+    color: #000
 }
 
 .contact-info {
@@ -157,7 +157,7 @@ p.enlarge span {
 a#pdf {
     display: block;
     float: left;
-    background: #832e2e;
+    background: #666;
     color: white;
     padding: 6px 50px 6px 12px;
     margin-bottom: 6px;
@@ -165,7 +165,7 @@ a#pdf {
 }
 
 a#pdf:hover {
-    background: #0c3766;
+    background: #222;
 }
 
 .job {
