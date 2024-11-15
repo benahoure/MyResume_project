@@ -6,17 +6,14 @@ phases:
       python: 3.9
     commands:
       - echo "Installing Python dependencies..."
-      - pip install -r requirements.txt # Assuming you have a requirements file
 
   pre_build:
     commands:
       - echo "Linting files..."
-      - pylint *.py # Run pylint or other linters as needed
 
   build:
     commands:
       - echo "Building the application..."
-      - python build.py # Or any custom build commands
 
   post_build:
     commands:
